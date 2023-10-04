@@ -15,7 +15,8 @@ public class Gioco_dei_dadi implements Runnable{
         t2.start();
 
         try {
-            Thread.sleep(15000);
+            t1.join();
+            t2.join();
         } catch (InterruptedException e) {
             System.out.println("Errore.");
         }
@@ -33,8 +34,8 @@ public class Gioco_dei_dadi implements Runnable{
     public void run() {
         for (int i=0; i<10; i++) {
             Random random = new Random();
-            int lancio1 = random.nextInt(7);
-            int lancio2 = random.nextInt(7);
+            int lancio1 = random.nextInt(6)+1;
+            int lancio2 = random.nextInt(6)+1;
 
             int totale = lancio1 + lancio2;
         }
