@@ -1,6 +1,6 @@
 public class Gioco_dei_dadi {
 
-    public Gioco_dei_dadi () {
+    public Gioco_dei_dadi() {
         Thread ct = Thread.currentThread();
         ct.setName("Thread Principale (padre)");
 
